@@ -1,41 +1,44 @@
-// const array = [{
-//         "day": "mon",
-//         "amount": 17.45
-//     },
-//     {
-//         "day": "tue",
-//         "amount": 34.91
-//     },
-//     {
-//         "day": "wed",
-//         "amount": 52.36
-//     },
-//     {
-//         "day": "thu",
-//         "amount": 31.07
-//     },
-//     {
-//         "day": "fri",
-//         "amount": 23.39
-//     },
-//     {
-//         "day": "sat",
-//         "amount": 43.28
-//     },
-//     {
-//         "day": "sun",
-//         "amount": 25.48
-//     }
-// ]
+const bars_container_div = document.querySelector(".bars_container")
+const array = [{
+        "day": "mon",
+        "amount": 17.45
+    },
+    {
+        "day": "tue",
+        "amount": 34.91
+    },
+    {
+        "day": "wed",
+        "amount": 52.36
+    },
+    {
+        "day": "thu",
+        "amount": 31.07
+    },
+    {
+        "day": "fri",
+        "amount": 23.39
+    },
+    {
+        "day": "sat",
+        "amount": 43.28
+    },
+    {
+        "day": "sun",
+        "amount": 25.48
+    }
+]
 
-// const days = document.querySelectorAll(".day")
-// days.forEach((day, index) => {
-//     console.log(day)
-//     array.forEach((item, index) => {
-//         day.textContent = item.day
-//     })
-// })
+function loadContent() {
+    bars_container_div.innerHTML += array.map((item, index) => {
+        return `
+        <div class="bar_div">
+            <div class="bar" id="bar_${index}"></div>
+            <p class="day">${item.day}</p>
+            <div class="amount">$${item.amount}</div>
+        </div>  
+        `
+    }).join("")
+}
 
-// // array.forEach((item, index) => {
-// //     console.log(item[index])
-// // })
+window.addEventListener("DOMContentLoaded", loadContent)

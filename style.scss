@@ -79,10 +79,31 @@ body {
                 align-items: center;
                 flex-direction: column;
                 gap: 10px;
+                position: relative;
                 .bar {
                     width: 50px;
                     background-color: $Soft_red;
                     border-radius: 5px;
+                    cursor: pointer;
+                    transition: all .3s;
+                }
+                .bar:hover {
+                    opacity: .8;
+                }
+                .bar:hover~.amount {
+                    display: grid;
+                }
+                .amount {
+                    position: absolute;
+                    top: 0;
+                    background-color: $Dark_brown;
+                    color: $Cream;
+                    width: 75px;
+                    height: 40px;
+                    display: none;
+                    place-items: center;
+                    border-radius: 5px;
+                    transform: translateY(-120%);
                 }
             }
         }
@@ -103,32 +124,32 @@ body {
     }
 }
 
-#bar_1 {
+#bar_0 {
     height: 50px;
 }
 
-#bar_2 {
+#bar_1 {
     height: 100px;
 }
 
-#bar_3 {
+#bar_2 {
     height: 150px;
     background-color: $Cyan;
 }
 
-#bar_4 {
+#bar_3 {
     height: 90px;
 }
 
-#bar_5 {
+#bar_4 {
     height: 67px;
 }
 
-#bar_6 {
+#bar_5 {
     height: 125px;
 }
 
-#bar_7 {
+#bar_6 {
     height: 75px;
 }
 
@@ -167,6 +188,12 @@ body {
                     .bar {
                         width: 33px;
                         border-radius: 3px;
+                    }
+                    .amount {
+                        width: 65px;
+                        height: 30px;
+                        border-radius: 5px;
+                        font-size: 0.9em;
                     }
                 }
             }
