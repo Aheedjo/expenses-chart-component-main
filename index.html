@@ -1,43 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Expenses chart component</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+    <title>Frontend Mentor | Expenses chart component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+        .attribution {
+            font-size: 11px;
+            text-align: center;
+        }
+        
+        .attribution a {
+            color: hsl(228, 45%, 44%);
+        }
+    </style>
 </head>
+
 <body>
+    <div class="card_container">
+        <div class="top_card">
+            <div class="top_bar_left">
+                <header>My balance</header>
+                <p id="balance" class="bold">$921.48</p>
+            </div>
+            <div class="logo">
+                <img src="./images/logo.svg" id="logo" alt="">
+            </div>
+        </div>
 
-  My balance
-  $921.48
+        <div class="bottom_card">
 
-  Spending - Last 7 days
+            <header class="bold">Spending - Last 7 days</header>
 
-  mon
-  tue
-  wed
-  thu
-  fri
-  sat
-  sun
+            <div class="bars_container">
+                <div class="bar_div">
+                    <div class="bar" id="bar_1"></div>
+                    <p class="day">mon</p>
+                </div>
+                <div class="bar_div">
+                    <div class="bar" id="bar_2"></div>
+                    <p class="day">Tue</p>
+                </div>
+                <div class="bar_div">
+                    <div class="bar" id="bar_3"></div>
+                    <p class="day">Wed</p>
+                </div>
+                <div class="bar_div">
+                    <div class="bar" id="bar_4"></div>
+                    <p class="day">Thu</p>
+                </div>
+                <div class="bar_div">
+                    <div class="bar" id="bar_5"></div>
+                    <p class="day">Fri</p>
+                </div>
+                <div class="bar_div">
+                    <div class="bar" id="bar_6"></div>
+                    <p class="day">Sat</p>
+                </div>
+                <div class="bar_div">
+                    <div class="bar" id="bar_7"></div>
+                    <p class="day">Sun</p>
+                </div>
+            </div>
 
-  Total this month
-  $478.33
+            <div class="line"></div>
 
-  +2.4%
-  from last month
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+            <div class="overview">
+                <div class="overview_left">
+                    <p>Total this month</p>
+                    <p id="total_spent" class="bold">$478.33</p>
+                </div>
+                <div class="overview_right">
+                    <p id="percentage" class="bold">+2.4%</p>
+                    <p>from last month</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+
+    <script src="script.js"></script>
 </body>
+
 </html>
