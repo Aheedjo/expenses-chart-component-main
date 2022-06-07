@@ -28,6 +28,7 @@ body {
     font-weight: $font_400;
     display: grid;
     place-items: place-center;
+    padding-top: 182px;
 }
 
 .bold {
@@ -90,8 +91,7 @@ body {
                 .bar:hover {
                     opacity: .8;
                 }
-                .bar:hover~.amount,
-                .bar:active~.amount {
+                .bar:hover~.amount {
                     display: grid;
                 }
                 .amount {
