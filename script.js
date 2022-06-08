@@ -34,7 +34,7 @@ function loadContent() {
         return `
         <div class="bar_div">
             <div class="bar" id="bar_${index}"></div>
-            <p class="day">${item.day}</p>
+            <p>${item.day}</p>
             <div class="amount">$${item.amount}</div>
         </div>  
         `
