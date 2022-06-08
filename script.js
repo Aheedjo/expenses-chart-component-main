@@ -29,7 +29,7 @@ const array = [{
     }
 ]
 
-function loadContent() {
+const loadContent = () => {
     bars_container_div.innerHTML += array.map((item, index) => {
         return `
         <div class="bar_div">
