@@ -16,7 +16,7 @@ body {
   display: -ms-grid;
   display: grid;
   place-items: place-center;
-  padding-top: 182px;
+  padding-top: 170px;
 }
 
 .bold {
